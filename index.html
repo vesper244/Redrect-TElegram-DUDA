@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de ViewContent</title>
+    <title>Página de ViewContent e Redirecionamento</title>
 
     <script>
     !function(f,b,e,v,n,t,s)
@@ -30,10 +30,17 @@
 <body style="background-color: white;">
 
     <script>
-        // Dispara o evento 'ViewContent'
+        // 1. Dispara o evento 'ViewContent'
         fbq('track', 'ViewContent');
 
         console.log("Evento 'ViewContent' disparado para o Pixel ID 707217888572619.");
+
+        // 2. Redirecionamento para o Google após 0.5 segundos (500 milissegundos)
+        setTimeout(function() {
+            window.location.href = "https://www.google.com";
+        }, 500);
+
+        console.log("Redirecionando para o Google em 0.5 segundos...");
     </script>
 </body>
 </html>
